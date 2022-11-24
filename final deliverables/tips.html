@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Liver Prediction</title>
+	<style>
+        body{
+			background-repeat: no-repeat;
+			background-attachment: fixed; 
+			background-size: 100% 100%;
+			background-image: url({{ url_for('static', filename='fatty-liver.jpg') }});
+		}
+        .topnav-right {
+			float: right;
+		}
+		#h{
+			background-color: slateblue;
+			text-align: center;
+		}
+        .content {
+            padding:20px;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(158, 153, 192);
+        }
+	</style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 id="h">Patient Liver Prediction</h1>
+        <div class="topnav-right">
+            <a href="/">Home</a>&nbsp;&nbsp;
+            <a href="/index">Predict</a>&nbsp;&nbsp;
+            <a href="/tips">Reasons & Tips</a>
+        </div>
+    </div>
+    <div class="content">
+        <ul style="list-style-type: disc;">
+            <li>Factors that may increase your risk of liver disease include:</li><br>
+                <ol style="list-style-type: decimal;">
+                    <li>Heavy alcohol use</li><br>
+                    <li>Obesity</li><br>
+                    <li>Type 2 diabetes</li><br>
+                    <li>Tattoos or body piercings</li><br>
+                    <li>Injecting drugs using shared needles</li><br>
+                    <li>Blood transfusion before 1992</li><br>
+                    <li>Exposure to other people's blood and body fluids</li><br>
+                    <li>Unprotected sex</li><br>
+                    <li>Exposure to certain chemicals or toxins</li><br>
+                    <li>Family history of liver disease</li><br>
+                </ol>
+			<br><li>Signs and Symptoms of liver disease</li><br>
+                <ol style="list-style-type: decimal;">
+                    <li>Skin and eyes that appear yellowish (jaundice)</li><br>
+                    <li>Abdominal pain and swelling</li><br>
+                    <li>Swelling in the legs and ankles</li><br>
+                    <li>Itchy skin</li><br>
+                    <li>Dark urine color</li><br>
+                    <li>Pale stool color</li><br>
+                    <li>Chronic fatigue</li><br>
+                    <li>Nausea or vomiting</li><br>
+                    <li>Loss of appetite</li><br>
+                    <li>Tendency to bruise easily</li><br>
+                </ol>
+            <br><li>To prevent liver disease:</li>
+                <ol style="list-style-type: decimal;">
+                    <br><li>Drink alcohol in moderation.</li><br>
+                    <p>
+                    For healthy adults, that means up to one drink a day for women and up to two drinks a day for men. 
+                    Heavy or high-risk drinking is defined as more than eight drinks a week for women and more than 15 drinks a week for men.
+                    </p>
+                    <br><li>Avoid risky behavior.</li><br>
+                    <p>
+                    Use a condom during sex. 
+                    If you choose to have tattoos or body piercings, be picky about cleanliness and safety when selecting a shop. 
+                    Seek help if you use illicit intravenous drugs, and don't share needles to inject drugs.
+                    </p>
+                    <br><li>Get vaccinated.</li><br>
+                    <p>
+                    If you're at increased risk of contracting hepatitis or if you've already been infected with any form of the hepatitis virus, talk to your doctor about getting the hepatitis A and hepatitis B vaccines.
+                    </p>
+                    <br><li>Use medications wisely.</li><br>
+                    <p>
+                    Take prescription and nonprescription drugs only when needed and only in recommended doses. 
+                    Don't mix medications and alcohol. 
+                    Talk to your doctor before mixing herbal supplements or prescription or nonprescription drugs.
+                    </p>
+                    <br><li>Avoid contact with other people's blood and body fluids.</li><br>
+                    <p>
+                    Hepatitis viruses can be spread by accidental needle sticks or improper cleanup of blood or body fluids.
+                    </p>
+                    <br><li>Keep your food safe.</li><br>
+                    <p>
+                    Wash your hands thoroughly before eating or preparing foods. 
+                    If traveling in a developing country, use bottled water to drink, wash your hands and brush your teeth.
+                    </p>
+                    <br><li>Take care with aerosol sprays.</li><br>
+                    <p>
+                    Make sure to use these products in a well-ventilated area, and wear a mask when spraying insecticides, fungicides, paint and other toxic chemicals. 
+                    Always follow the manufacturer's instructions.
+                    </p>
+                    <br><li>Protect your skin.</li><br>
+                    <p>
+                    When using insecticides and other toxic chemicals, wear gloves, long sleeves, a hat and a mask so that chemicals aren't absorbed through your skin.
+                    </p>
+                    <br><li>Maintain a healthy weight.</li><br>
+                    <p>
+                    Obesity can cause nonalcoholic fatty liver disease.
+                    </p>
+                </ol>
+        </ul> 
+    </div>
+</body>
+</html>
