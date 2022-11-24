@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Patient Liver Prediction</title>
+		<style>
+            body{
+				background-repeat: no-repeat;
+				background-attachment: fixed; 
+				background-size: 100% 100%;
+				font-family: Arial; margin: 0;
+				background-image: url({{ url_for('static', filename='fatty-liver.jpg') }});
+			}
+			#t1{
+				background-color: aliceblue;
+				color: black;
+			}
+			#h{
+				background-color: slateblue;
+				text-align: center;
+			}
+			
+			#gen{
+				opacity: .5;
+			}
+			#b1 {
+				color: black;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+			}
+			.topnav-right {
+				float: right;
+			}
+			.content {
+				padding:20px;
+			}
+			.topnav {
+            overflow: hidden;
+            background-color: rgb(158, 153, 192);
+        	}
+		</style>
+	</head>
+	<body>
+		<div class="topnav">
+			<h1 id="h">Patient Liver Prediction</h1>
+			<div class="topnav-right">
+				<a href="/">Home</a>&nbsp;&nbsp;
+				<a href="/index">Predict</a>&nbsp;&nbsp;
+				<a href="/tips">Reasons & Tips</a>
+			</div>
+		</div>
+		<div class="content">
+		<form method="POST" action="/predict">
+			<table style="margin-left:auto;margin-right:auto;" id="t1">
+				<tr>
+					<td><label>Age : </label></td>
+					<td><input type="text" name="age"><br></td>
+				</tr>
+				<tr>
+					<td><label>Gender : </label></td>
+        			<td><input type="text" name="gen" placeholder="Enter 0 as Male, 1 as Female"><br></td>
+				</tr>
+				<tr>
+					<td><label>Total Bilirubin : </label></td>
+					<td><input type="text" name="tbil" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Direct Bilirubin : </label></td>
+					<td><input type="text" name="dbil" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Alkaline Phosphate : </label></td>
+					<td><input type="text" name="alk" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Alanine aminotransferase : </label></td>
+					<td><input type="text" name="ala" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Aspartate aminotransferase : </label></td>
+					<td><input type="text" name="asp" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Total Protiens : </label></td>
+					<td><input type="text" name="tpro" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Albumin : </label></td>
+					<td><input type="text" name="alb" required><br></td>
+				</tr>
+				<tr>
+					<td><label>Albumin and Globulin ratio : </label></td>
+					<td><input type="text" name="albglo" required><br></td>
+				</tr>
+				<tr>
+					<td><button class="button" id="b1">Predict</button></td>
+				</tr>
+			</table>
+		</form>
+		</div>
+	</body>
+</html>
