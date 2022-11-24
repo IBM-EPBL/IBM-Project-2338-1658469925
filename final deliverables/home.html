@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Liver Prediction</title>
+	<style>
+        body{
+			background-repeat: no-repeat;
+			background-attachment: fixed; 
+			background-size: 100% 100%;
+			background-image: url({{ url_for('static', filename='fatty-liver.jpg') }});
+		}
+        .topnav-right {
+			float: right;
+		}
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(158, 153, 192);
+        }
+		#h{
+			background-color: slateblue;
+			text-align: center;
+		}
+        .content {
+            padding:20px;
+        }
+	</style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 id="h">Patient Liver Prediction</h1>
+        <div class="topnav-right">
+            <a href="/">Home</a>&nbsp;&nbsp;
+            <a href="/index">Predict</a>&nbsp;&nbsp;
+            <a href="/tips">Reasons & Tips</a>
+        </div>
+    </div>
+    <div class="content">
+        The Patient liver disease predictor needs the following information. These information can be found in your blood sample report.
+        <ol style="list-style-type: decimal;">
+            <li>Total Bilirubin</li>
+            Bilirubin is an orange-yellow pigment that occurs normally when part of your red blood cells break down. 
+            A bilirubin test measures the amount of bilirubin in your blood. 
+            It’s used to help find the cause of health conditions like jaundice, anemia, and liver disease.
+        <pre>Range: .22 - 1.0 mg/dl</pre>
+            <li>Direct Bilirubin</li>
+            Bilirubin attached by the liver to glucuronic acid, a glucose-derived acid, is called direct or conjugated, bilirubin. 
+            Bilirubin not attached to glucuronic acid is called indirect.
+        <pre>Range: 0.0 - 0.2 mg/dl</pre>
+            <li>Alkaline Phosphatase</li>
+            Alkaline phosphatase (ALP) is an enzyme in a person’s blood that helps break down proteins. 
+            Using an ALP test, it is possible to measure how much of this enzyme is circulating in a person’s blood.
+        <pre>Range: 110 - 310 U/L</pre>
+            <li>Alamine Aminotransferase</li>
+            Alanine aminotransferase (ALT) is an enzyme found primarily in the liver and kidney. 
+            ALT is increased with liver damage and is used to screen for and/or monitor liver disease.
+        <pre>Range: 5 - 45 U/L</pre>
+            <li>Aspartate Aminotransferase</li>
+            AST(aspartate aminotransferase) is an enzyme that is found mostly in the liver, but also in muscles. 
+            When your liver is damaged, it releases AST into your bloodstream. 
+            An AST blood test measures the amount of AST in your blood. 
+            The test can help your health care provider diagnose liver damage or disease.
+        <pre>Range: 5 - 40 U/L</pre>
+            <li>Total Proteins</li>
+            Albumin and globulin are two types of protein in your body. 
+            The total protein test measures the total amount of albumin and globulin in your body.
+        <pre>Range: 7.2-8.0 gm/100ml</pre>
+            <li>Albumin</li>
+            Albumin is a protein made specifically by the liver, and can be measured cheaply and easily. It is the main constituent of total protein (the remaining constituents are primarily globulins). Albumin levels are decreased in chronic liver disease, such as cirrhosis. 
+            It is also decreased in nephrotic syndrome, where it is lost through the urine. 
+            The consequence of low albumin can be edema since the intravascular oncotic pressure becomes lower than the extravascular space. 
+            An alternative to albumin measurement is prealbumin, which is better at detecting acute changes (half-life of albumin and prealbumin is about 2 weeks and about 2 days, respectively).
+        <pre>Range: 3.5 - 5 gm/dl</pre>
+            <li>Albumin and Globulin Ratio</li>
+            The Albumin to Globulin ratio (A:G) is the ratio of albumin present in serum in relation to the amount of globulin. 
+            The ratio can be interpreted only in light of the total protein concentration. 
+            Although albumin is made exclusively in the liver, globulins are produced in many sites throughout the body. 
+        <pre>The normal ratio in most species approximates 1:1.</pre>
+        </ol> 
+    </div>
+</body>
+</html>
