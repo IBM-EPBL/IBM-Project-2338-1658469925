@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Liver Prediction</title>
+	<style>
+        body{
+			background-repeat: no-repeat;
+			background-attachment: fixed; 
+			background-size: 100% 100%;
+			background-image: url({{ url_for('static', filename='fatty-liver.jpg') }});
+		}
+		#t1{
+			color: black;
+		}
+		.topnav-right {
+			float: right;
+		}
+		#h{
+			background-color: slateblue;
+			text-align: center;
+		}
+		.content {
+			padding:20px;
+		}
+		.topnav {
+            overflow: hidden;
+            background-color: rgb(158, 153, 192);
+        }
+	</style>
+</head>
+<body>
+	<div class="topnav">
+        <h1 id="h">Patient Liver Prediction</h1>
+        <div class="topnav-right">
+            <a href="/">Home</a>&nbsp;&nbsp;
+            <a href="/index">Predict</a>&nbsp;&nbsp;
+            <a href="/tips">Reasons & Tips</a>
+        </div>
+    </div>
+	<div class="content">
+	<table style="margin-left:auto;margin-right:auto;margin-top: auto;margin-bottom: auto;" id="t1">
+		<tr>
+			<td>
+				<h1>Your test result is</h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			{% if res==1 %}
+				<div id="d1">
+					<h2><br>You may have LIVER DISEASE <br><br>Please don't panic<br><br>Please Consult a Doctor.</h2><br>
+					<h3>If you want to know the tips, <a href="/tips">Click here</a></h3>
+				</div>
+			{% elif res==0 %}
+				<div id="d1">
+					<h2><br>You DON'T have LIVER DISEASE.<br>But be cautious in your lifestyle<br></h2>
+					<h3>If you want to know the tips, <a href="/tips">Click here</a></h3>
+				</div>
+			{% endif %}
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
